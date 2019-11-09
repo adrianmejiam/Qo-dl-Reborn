@@ -146,7 +146,7 @@ class Client:
 	def get_favourites(self, type):
 		return self.multi_meta('favorite/getUserFavorites?', 'total', None, type)
 	
-	def test_secret(self, sec):
+	def test_secret(self, id, sec):
 		try:
 			r = self.api_call('userLibrary/getAlbumsList?', id=id, sec=sec)
 			return True
