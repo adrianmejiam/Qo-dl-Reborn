@@ -61,7 +61,7 @@ class Client:
 			r_sig = "userLibrarygetAlbumsList" + str(unix) + kwargs['sec']
 			r_sig_hashed = hashlib.md5(r_sig.encode('utf-8')).hexdigest()
 			params={
-				"app_id": self.id,
+				"app_id": kwargs['id'],
 				"user_auth_token": self.uat,
 				"request_ts": unix,
 				"request_sig": r_sig_hashed}
@@ -148,7 +148,7 @@ class Client:
 	
 	def test_secret(self, sec):
 		try:
-			r = self.api_call('userLibrary/getAlbumsList?', sec=sec)
+			r = self.api_call('userLibrary/getAlbumsList?', id=id, sec=sec)
 			return True
 		except InvalidAppSecretError:
 			return False
@@ -162,7 +162,7 @@ class Client:
 			spoofer = spoofbuz.Spoofer()
 			id = spoofer.get_app_id()
 			for secret in spoofer.get_app_sec().values():
-				if self.test_secret(secret):
+				if self.test_secret(id, secret):
 					sec = secret
 					break
 			id_sec={
