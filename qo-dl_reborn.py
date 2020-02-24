@@ -541,11 +541,28 @@ if __name__ == '__main__':
 			if sys.argv[1]:
 				cfg, tag_cfg = parse_prefs(cfg, tag_cfg)
 				cli = True
+				label = client.auth(cfg['email'], cfg['pwd'])
+				print("Signed in successfully - " + label + " account.\n")
+
+				urls = cfg['url'].split(',')
+
+				for url in urls:
+					try:
+						cfg['url'] = url
+						main(False, False, cfg, tag_cfg, None, cli)
+					except:
+						print("failed with " + url)
+						continue
+			else:
+				cli = False
+				label = client.auth(cfg['email'], cfg['pwd'])
+				print("Signed in successfully - " + label + " account.\n")
+				main(False, False, cfg, tag_cfg, None, cli)
 		except IndexError:
 			cli = False
-		label = client.auth(cfg['email'], cfg['pwd'])
-		print("Signed in successfully - " + label + " account.\n")
-		main(False, False, cfg, tag_cfg, None, cli)
+			label = client.auth(cfg['email'], cfg['pwd'])
+			print("Signed in successfully - " + label + " account.\n")
+			main(False, False, cfg, tag_cfg, None, cli)
 	except (KeyboardInterrupt, SystemExit):
 		sys.exit()
 	except:

@@ -1,13 +1,13 @@
 {
     "creds":{
-        "email": "",
-        "password": ""
+        "email": "sexidah482@eigoemail.com",
+        "password": "a5c44b6ed07c01cb35c32c4b72a99b35"
     },
     "prefs":{
         "quality": 4,
         "keep_cover": false,
         "cover_size": 4,
-        "download_dir": "",
+        "download_dir": "/home/pi/music",
         "embed_cover": true,
         "filename_template": "{tracknumber}. {title}",
         "tags":{
@@ -15,16 +15,16 @@
             "albumartist": true,
             "artist": true,
             "comment": "",
-            "composer": false,
-            "discnumber": false,
-            "disctotal": false,
-            "copyright": false,
+            "composer": true,
+            "discnumber": true,
+            "disctotal": true,
+            "copyright": true,
             "upc": true,
-            "date": false,       
-            "genre": false,
+            "date": true,
+            "genre": true,
             "isrc": true,
-            "label": false,
-            "performer": false,
+            "label": true,
+            "performer": true,
             "title": true,
             "tracknumber": true, 
             "tracktotal": true,
