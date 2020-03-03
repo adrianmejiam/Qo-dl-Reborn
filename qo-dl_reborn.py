@@ -550,8 +550,8 @@ if __name__ == '__main__':
 					try:
 						cfg['url'] = url
 						main(False, False, cfg, tag_cfg, None, cli)
-					except:
-						print("failed with " + url)
+					except Exception as e:
+						print("failed with " + url + "\n" + str(e))
 						continue
 			else:
 				cli = False
