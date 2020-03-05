@@ -549,7 +549,7 @@ def main(type, id, cfg, tag_cfg, fol, cli):
         if fol:
             break
         if cli:
-            sys.exit()
+            return
         os_cmds('c')
         print_title()
 
@@ -576,6 +576,7 @@ if __name__ == '__main__':
                         traceback.print_exc()
                         print("failed with " + url)
                         continue
+                sys.exit()
             else:
                 cli = False
                 label = client.auth(cfg['email'], cfg['pwd'])
