@@ -572,9 +572,10 @@ if __name__ == '__main__':
                     try:
                         cfg['url'] = url
                         main(False, False, cfg, tag_cfg, None, cli)
+                        print("Download Complete " + url + "\n\n\n\n")
                     except:
                         traceback.print_exc()
-                        print("failed with " + url)
+                        print("failed with " + url + "\n\n\n\n")
                         continue
                 sys.exit()
             else:
