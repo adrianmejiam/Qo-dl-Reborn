@@ -445,9 +445,12 @@ def main(type, id, cfg, tag_cfg, fol, cli):
             ref = "album/" + str(src_meta['id'])
             for track in src_meta['tracks']['items']:
                 num += 1
-                final_meta = parse_meta(track, al_meta, num, None)
-                download(track['id'], album_fol_s, final_meta, num, None, fol, qual, cov, ref, tag_cfg, fn_template,
-                         cov_dir, embed_cov)
+                try:
+                    final_meta = parse_meta(track, al_meta, num, None)
+                    download(track['id'], album_fol_s, final_meta, num, None, fol, qual, cov, ref, tag_cfg, fn_template,
+                             cov_dir, embed_cov)
+                except:
+                    continue
             download_booklet(album_fol_s, src_meta.get('goodies'))
         elif type == "track":
             src_meta = client.get_track_meta(id)
@@ -496,15 +499,18 @@ def main(type, id, cfg, tag_cfg, fol, cli):
                         print("Favourited tracks")
                     dir_setup(album_fol_s)
                 for track in tracks:
-                    num += 1
-                    al_meta = parse_meta(track['album'], None, None, tot)
-                    cov = track['album']['image']['thumbnail'].split('_')[0] + cov_size
-                    cov_dir = os.path.join(album_fol_s, "cover.jpg")
-                    if not download_cov(cov, cov_dir):
-                        cov_dir = None
-                    final_meta = parse_meta(track, al_meta, num, None)
-                    download(track['id'], album_fol_s, final_meta, num, tot, fol, qual, cov, ref, tag_cfg, fn_template,
-                             cov_dir, embed_cov)
+                    try:
+                        num += 1
+                        al_meta = parse_meta(track['album'], None, None, tot)
+                        cov = track['album']['image']['thumbnail'].split('_')[0] + cov_size
+                        cov_dir = os.path.join(album_fol_s, "cover.jpg")
+                        if not download_cov(cov, cov_dir):
+                            cov_dir = None
+                        final_meta = parse_meta(track, al_meta, num, None)
+                        download(track['id'], album_fol_s, final_meta, num, tot, fol, qual, cov, ref, tag_cfg, fn_template,
+                                 cov_dir, embed_cov)
+                    except:
+                        continue
             os.remove(cov_dir)
         elif type in ["artist", "label", "albums"]:
             if type == "artist":
