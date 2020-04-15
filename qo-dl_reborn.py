@@ -367,10 +367,10 @@ def download_track(url_resp, title, pre, num, tot, qual, ref):
 
 
 def download(id, album_fol_s, meta, num, tot, fol, qual, cov, ref, tag_cfg, fn_template, cov_dir, embed_cov):
-    if not fn_template.strip():
-        fn_template = str(num) + ". " + meta['TITLE']
-    else:
-        fn_template = fn_template.upper().format(**meta)
+# if not fn_template.strip():
+    fn_template = "{:0>2d}".format(num) + ". " + meta['TITLE']
+# else:
+#     fn_template = fn_template.upper().format(**meta)
     title = meta['TITLE']
     if not tot:
         tot = meta['TRACKTOTAL']
