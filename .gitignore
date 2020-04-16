@@ -1,5 +1,2 @@
-.idea/.gitignore
-.idea/misc.xml
-.idea/modules.xml
-.idea/Qo-DL-Reborn.iml
-.idea/vcs.xml
+.idea/
+venv/
