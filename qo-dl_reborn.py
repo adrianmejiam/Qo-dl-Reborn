@@ -557,9 +557,10 @@ def main(type, id, cfg, tag_cfg, fol, cli):
                     # The artist & label epoint don't include track meta we need. Run IDs through album ripping code.
                     main('album', album['id'], cfg, tag_cfg, sanitize(title), cli)
         if cov_dir is not None and keep_cov:
-            out_fn = os.path.join(album_fol_s, "folder.jpg")
-            exist_check(out_fn)
-            os.rename(cov_dir, out_fn)
+            pass
+            # out_fn = os.path.join(album_fol_s, "folder.jpg")
+            # exist_check(out_fn)
+            # os.rename(cov_dir, out_fn)
         elif cov_dir:
             if os.path.isfile(cov_dir):
                 os.remove(cov_dir)

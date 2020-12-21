@@ -5,7 +5,7 @@
     },
     "prefs":{
         "quality": 4,
-        "keep_cover": false,
+        "keep_cover": true,
         "cover_size": 4,
         "download_dir": "/Volumes/Music",
         "embed_cover": true,
