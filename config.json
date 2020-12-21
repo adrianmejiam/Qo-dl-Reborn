@@ -1,13 +1,13 @@
 {
     "creds":{
-        "email": "",
-        "password": ""
+        "email": "8sabrirazy5@bakingonstone.com",
+        "password": "gkrtnWkd1"
     },
     "prefs":{
         "quality": 4,
         "keep_cover": false,
         "cover_size": 4,
-        "download_dir": "/home/pi/music",
+        "download_dir": "/Volumes/Music",
         "embed_cover": true,
         "filename_template": "{tracknumber}. {title}",
         "tags":{

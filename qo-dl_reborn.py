@@ -491,24 +491,35 @@ def main(type, id, cfg, tag_cfg, fol, cli):
                         album_fol_s = os.path.join(dl_dir, sanitize(album_fol))
                         tracks = dict['tracks']['items']
                         print(owner + " - " + title + "\n")
+
+                        dir_setup(album_fol_s)
+                        try:
+                            cov = dict['image_rectangle'][0]
+                            cov_dir = os.path.join(album_fol_s, "cover.jpg")
+                            download_cov(cov, cov_dir)
+                        except:
+                            pass
                     else:
                         tot = dict['total']
                         ref = 'user/library/favorites/tracks'
                         album_fol_s = os.path.join(dl_dir, "Favourited tracks")
                         tracks = dict['items']
                         print("Favourited tracks")
-                    dir_setup(album_fol_s)
+                        dir_setup(album_fol_s)
+
                 for track in tracks:
                     try:
                         num += 1
                         al_meta = parse_meta(track['album'], None, None, tot)
                         cov = track['album']['image']['thumbnail'].split('_')[0] + cov_size
-                        cov_dir = os.path.join(album_fol_s, "cover.jpg")
+                        cov_dir = os.path.join(album_fol_s, "qo_dl_current_track.jpg")
                         if not download_cov(cov, cov_dir):
                             cov_dir = None
                         final_meta = parse_meta(track, al_meta, num, None)
                         download(track['id'], album_fol_s, final_meta, num, tot, fol, qual, cov, ref, tag_cfg, fn_template,
                                  cov_dir, embed_cov)
+                    except KeyboardInterrupt:
+                        sys.exit()
                     except:
                         continue
             os.remove(cov_dir)
