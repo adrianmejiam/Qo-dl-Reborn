@@ -1,13 +1,13 @@
 {
     "creds":{
-        "email": "8sabrirazy5@bakingonstone.com",
-        "password": "gkrtnWkd1"
+        "email": "marcela.gonzalezal@uanl.edu.mx",
+        "password": "Wxm2824#$"
     },
     "prefs":{
         "quality": 4,
         "keep_cover": true,
         "cover_size": 4,
-        "download_dir": "/Volumes/Music",
+        "download_dir": "/content/drive/MyDrive",
         "embed_cover": true,
         "filename_template": "{tracknumber}. {title}",
         "tags":{
@@ -28,7 +28,7 @@
             "title": true,
             "tracknumber": true, 
             "tracktotal": true,
-            "url": false,
+            "url": true,
             "year": true
         }
     }
