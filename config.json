@@ -1,13 +1,13 @@
 {
     "creds":{
-        "email" : "wxm28241@hawkmail.hacc.edu",
-        "senha" : "Wxm28240 # $"
+        "email": "wxm28241@hawkmail.hacc.edu",
+        "password": "Wxm28240#$"
     },
     "prefs":{
         "quality": 4,
         "keep_cover": true,
         "cover_size": 4,
-        "download_dir": "/content/drive/MyDrive",
+        "download_dir": "/content/drive",
         "embed_cover": true,
         "filename_template": "{tracknumber}. {title}",
         "tags":{
