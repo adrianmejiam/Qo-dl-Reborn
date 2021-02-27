@@ -8,7 +8,6 @@
         "keep_cover": true,
         "cover_size": 4,
         "download_dir": "/content/drive/MyDrive",
-drive/MyDrive",
         "embed_cover": true,
         "filename_template": "{tracknumber}. {title}",
         "tags":{
