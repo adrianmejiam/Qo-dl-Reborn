@@ -7,7 +7,8 @@
         "quality": 4,
         "keep_cover": true,
         "cover_size": 4,
-        "download_dir": "/content/Mydrive/MyDrive",
+        "download_dir": "/content/
+drive/MyDrive",
         "embed_cover": true,
         "filename_template": "{tracknumber}. {title}",
         "tags":{
