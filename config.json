@@ -1,7 +1,7 @@
 {
     "creds":{
-        "email": "wxm28241@hawkmail.hacc.edu",
-        "password": "Wxm28240#$"
+        "email": "wxm282410@hawkmail.hacc.edu",
+        "password": "Wxm282410#$"
     },
     "prefs":{
         "quality": 4,
@@ -14,10 +14,10 @@
             "album": true,
             "albumartist": true,
             "artist": true,
-            "comment": "",
+            "comment": "adrianmejiam",
             "composer": true,
             "discnumber": true,
-            "disctotal": true,
+            "disctotal": false,
             "copyright": true,
             "upc": true,
             "date": true,
