@@ -1,2 +1,2 @@
 web: gunicorn qobuz:app
-web: python qobuz.py
+web: gnicorn python qobuz.py
