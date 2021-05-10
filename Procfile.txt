@@ -1,2 +1,0 @@
-web: gunicorn qobuz:app
-web: gnicorn python qobuz.py
