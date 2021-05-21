@@ -1,1 +1,1 @@
-worker: python3 -m qo-dl_reborn.py
+worker: python3 qo-dl_reborn.py
