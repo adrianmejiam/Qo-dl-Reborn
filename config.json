@@ -7,7 +7,7 @@
         "quality": 4,
         "keep_cover": true,
         "cover_size": 4,
-        "download_dir": "Downloads",
+        "download_dir": "/data/data/com.termux/files/home/storage/Music",
         "embed_cover": true,
         "filename_template": "{tracknumber}. {title}",
         "tags":{
