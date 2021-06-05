@@ -1,13 +1,13 @@
 {
     "creds":{
-        "email": "jokefag183@ffuqzt.com",
+        "email": "victorvabt@gmail.com",
         "password": "Mexico_2021"
     },
     "prefs":{
         "quality": 4,
         "keep_cover": true,
         "cover_size": 4,
-        "download_dir": "/data/data/com.termux/files/home/storage/Music",
+        "download_dir": "/data/data/com.termux/files/home/storage/music",
         "embed_cover": true,
         "filename_template": "{tracknumber}. {title}",
         "tags":{
